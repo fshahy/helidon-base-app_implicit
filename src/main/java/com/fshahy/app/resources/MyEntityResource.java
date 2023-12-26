@@ -2,8 +2,6 @@ package com.fshahy.app.resources;
 
 import java.util.List;
 
-import javax.print.attribute.standard.Media;
-
 import com.fshahy.app.models.MyEntity;
 
 import jakarta.persistence.EntityManager;
