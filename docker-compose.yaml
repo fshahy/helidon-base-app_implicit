@@ -1,0 +1,41 @@
+version: '3.1'
+services:
+  mysql:
+    image: mysql:8.2.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    networks:
+      - hba-net
+    volumes:
+      - hba-db2:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: helidon-base-app:1.0
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - hba-net
+    external_links:
+        - mysql:mysql
+    # environment:
+    #   POSTGRES_DB: blogdb
+    #   POSTGRES_TEST_DB: blogdb_test
+    #   POSTGRES_USER: postgres
+    #   POSTGRES_PASSWORD: secret
+    #   POSTGRES_HOST: db
+    depends_on:
+      - mysql
+# Names our volume
+volumes:
+  hba-db2:
+    driver: local
+networks:
+  hba-net:
+    driver: bridge
