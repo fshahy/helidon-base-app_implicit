@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta8
+
+kind: Config
+
+metadata:
+  name: helidon-base-app
+build:
+  tagPolicy:
+    envTemplate:
+      template: "{{.HBA_VERSION}}"
+  artifacts:
+    - image: helidon-base-app
+      docker:
+        dockerfile: Dockerfile
+        noCache: true
+manifests:
+  rawYaml:
+    - mysql-pv.yaml
+    - app.yaml
