@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns="http://maven.apache.org/POM/4.0.0"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <parent>
         <groupId>io.helidon.applications</groupId>
         <artifactId>helidon-mp</artifactId>
@@ -14,8 +12,8 @@
 
     <groupId>fshahy-helidon</groupId>
     <artifactId>helidon-base-app</artifactId>
-    <name>Helidon Examples Microprofile Implicit Hello World</name>
 
+    <name>Helidon Examples Microprofile Implicit Hello World</name>
     <description>
         Microprofile example with implicit bootstrapping (cdi.Main(new String[0])
     </description>
@@ -33,32 +31,32 @@
         <dependency>
             <groupId>io.helidon.integrations.cdi</groupId>
             <artifactId>helidon-integrations-cdi-datasource-hikaricp</artifactId>
-            <scope>runtime</scope> 
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>jakarta.transaction</groupId>
             <artifactId>jakarta.transaction-api</artifactId>
-            <scope>provided</scope> 
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.helidon.integrations.cdi</groupId>
             <artifactId>helidon-integrations-cdi-jta-weld</artifactId>
-            <scope>runtime</scope> 
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
-            <scope>provided</scope> 
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.helidon.integrations.cdi</groupId>
             <artifactId>helidon-integrations-cdi-jpa</artifactId>
-            <scope>runtime</scope> 
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>io.helidon.integrations.cdi</groupId>
             <artifactId>helidon-integrations-cdi-hibernate</artifactId>
-            <scope>runtime</scope> 
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>io.smallrye</groupId>
@@ -140,7 +138,6 @@
 
             </plugins>
         </pluginManagement>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
