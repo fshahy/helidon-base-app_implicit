@@ -15,5 +15,6 @@ build:
         noCache: true
 manifests:
   rawYaml:
-    - mysql-pv.yaml
+    - mysql-init.yaml
+    - mysql.yaml
     - app.yaml
