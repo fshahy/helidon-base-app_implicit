@@ -24,12 +24,6 @@ services:
       - hba-net
     external_links:
         - mysql:mysql
-    # environment:
-    #   POSTGRES_DB: blogdb
-    #   POSTGRES_TEST_DB: blogdb_test
-    #   POSTGRES_USER: postgres
-    #   POSTGRES_PASSWORD: secret
-    #   POSTGRES_HOST: db
     depends_on:
       - mysql
 # Names our volume
